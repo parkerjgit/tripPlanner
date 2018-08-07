@@ -1,0 +1,28 @@
+{
+  "name": "tripPlanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "mapbox-gl": "^0.47.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w",
+    "start": "node bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbungeroth/tripPlanner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbungeroth/tripPlanner/issues"
+  },
+  "homepage": "https://github.com/mbungeroth/tripPlanner#readme"
+}
