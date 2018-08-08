@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const { db } = require('./models')
 
 const app = express();
 
@@ -25,8 +26,9 @@ app.use((req, res) => {
 
 
 const PORT = 3000;
-const init = () => {
+const init = async () => {
   // connect
+  await db.sync();
   app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
   });
