@@ -1,80 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src="./bundle.js" defer></script>
-  <link rel="stylesheet" href="./style.css">
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <title>Trip Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="./style.css"></link>
 </head>
+
 <body>
   <header>
+    <h1>TripPlanner</h1>
   </header>
-
-  <div class="content">
+  <div id="app">
     <div id="map"></div>
     <aside>
-      <div class="locations">
-        <div class="location-items">
-          Hotels
-          <select name="" id="">
-            <option value="">[[xxxxxxxxxxxxxxxx]]</option>
+      <div class="panel" id="options-panel">
+        <div>
+          <h2>Hotels</h2>
+          <select id="hotels-choices">
+            <option>An Hotel</option>
           </select>
-          <button>X</button>
+          <button id="hotels-add" class="options-btn">+</button>
         </div>
-        <div class="location-items">
-          Restaurants
-          <select name="" id="">
-            <option value="">[[yyyyyyyyyyyyyyyy]]</option>
+        <div>
+          <h2>Restaurants</h2>
+          <select id="restaurants-choices">
+            <option>A Restaurant</option>
           </select>
-          <button>X</button>
+          <button id="restaurants-add" class="options-btn">+</button>
         </div>
-        <div class="location-items">
-          Things To Do
-          <select name="" id="">
-            <option value="">[[zzzzzzzzzzzzzzzz]]</option>
+        <div>
+          <h2>Activities</h2>
+          <select id="activities-choices">
+            <option>An Activity</option>
           </select>
-          <button>X</button>
+          <button id="activities-add" class="options-btn">+</button>
         </div>
       </div>
+      <div class="panel" id="itinerary">
+        <div>
+          <h2>My Hotel</h2>
+          <ul class="list-group" id="hotels-list">
 
-      <div class="itinerary">
-        <div class="aside-header">
-          Itinerary:
+          </ul>
         </div>
-        <div class="aside-contents">
-          <div>
-              <h3>My Hotel</h3>
-              <ul>
-                <li>[[xxxxxxxxxxxxxxxx]]
-                  <button>X</button>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>My Restaurants</h3>
-              <ul>
-                <li>[[yyyyyyyyyyyyyyyy]]
-                  <button>X</button>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>My Activities</h3>
-              <ul>
-                <li>[[zzzzzzzzzzzzzzzz]]
-                  <button>X</button>
-                </li>
-              </ul>
-            </div>
+        <div>
+          <h2>My Restaurants</h2>
+          <ul class="list-group" id="restaurants-list">
+
+          </ul>
+        </div>
+        <div>
+          <h2>My Activities</h2>
+          <ul class="list-group" id="activities-list">
+
+          </ul>
         </div>
       </div>
     </aside>
   </div>
-
-  <footer></footer>
+  <script src="./bundle.js"></script>
 </body>
+
 </html>
